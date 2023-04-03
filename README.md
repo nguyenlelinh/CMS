@@ -16,3 +16,18 @@ Deployment has the following dependencies:
 
 ### SQL
 import file cms(SQL file)
+
+Create .env file
+```
+cp .env.example .env
+```
+
+Install dependencies
+```
+composer install
+```
+
+Generate key
+```
+php artisan key:generate
+```
