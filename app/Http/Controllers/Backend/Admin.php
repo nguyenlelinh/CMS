@@ -8,6 +8,7 @@ use App\Http\MyModels\Backend\Admin as Model;
 use App\Http\MyModels\Backend\AdminRole as RoleModel;
 use App\Http\MyModels\Backend\Status as StatusModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class Admin extends BaseController
 {
@@ -50,8 +51,9 @@ class Admin extends BaseController
     public function create(Request $request)
     {
         if($request->ajax()){
+//            dd($request);
             $admin = $this->validateWhenCreate($request->input());
-            $admin[$this->model->FN->matKhau] = encryptString('vsp@1234');
+            $admin[$this->model->FN->matKhau] =  Hash::make('12345678');
             $admin[$this->model->FN->ngayTao] = time();
             $inserted_id = $this->model->insert($admin);
             if($inserted_id){
@@ -65,6 +67,7 @@ class Admin extends BaseController
             'RF'=>$M_Role->FN,
             'chuc_danh'=>$M_Role->getByStatus(1),
         ];
+//        dd($data);
         return view(self::VIEW_URL.'form', $data);
     }
 

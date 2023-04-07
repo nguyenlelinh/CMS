@@ -38,7 +38,7 @@ class AdminRole extends BaseModel
              $this->datatable['target_text'] = 'quản trị viên';
              $this->datatable['columns'] = [
                  ['data' => 'index_num', "orderable" => false, 'searchable' => false],
-                 ['data' => $this->FN->slug],
+//                 ['data' => $this->FN->slug],
                  ['data' => $this->FN->ten],
                  ['data' => $this->FN->trangThai],
                  ['data' => $this->FN->ngayTao, 'searchable' => false],

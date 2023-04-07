@@ -28,7 +28,7 @@
                 <thead>
                     <tr>
                         <th width="3%">STT</th>
-                        <th>Mã chức danh</th>
+{{--                        <th>Mã chức danh</th>--}}
                         <th>Tên chức danh</th>
                         <th width="10%">Trạng thái</th>
                         <th width="15%">Ngày Tạo</th>
